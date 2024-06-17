@@ -28,7 +28,7 @@ const libraries: ("places" | "geometry" | "drawing" | "visualization")[] = ["pla
 
 const MapComponent: React.FC<MapComponentProps> = ({ fromAirport, toAirport, showMarkersAndPolyline, setMap }) => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || "AIzaSyCL5VUytNRHoOPu_ofkwN5a2s2NBpo5q_I",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || "",
     libraries,
   });
 
