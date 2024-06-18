@@ -21,6 +21,7 @@ const DistanceCalculator: React.FC = () => {
 
   const handleAirportSelect = (setAirport: React.Dispatch<React.SetStateAction<Airport | null>>) => (airport: Airport | null) => {
     setAirport(airport);
+    setDistance(null);
     setMapKey(prevKey => prevKey + 1); // Trigger map re-render
   };
 

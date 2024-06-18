@@ -7,6 +7,7 @@ import {
   useJsApiLoader,
 } from "@react-google-maps/api";
 
+
 interface AirportPosition {
   lat: number;
   lng: number;
@@ -27,8 +28,9 @@ const center = {
 const libraries: ("places" | "geometry" | "drawing" | "visualization")[] = ["places"];
 
 const MapComponent: React.FC<MapComponentProps> = ({ fromAirport, toAirport, showMarkersAndPolyline, setMap }) => {
+
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY || "",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API || "",
     libraries,
   });
 
