@@ -19,10 +19,9 @@ interface AirportSearchProps {
 
 const AirportSearch: React.FC<AirportSearchProps> = ({ label, onAirportSelect }) => {
     const [options, setOptions] = useState<Airport[]>([]);
-    const [searchValue, setSearchValue] = useState<string>('');
 
     const handleInputChange = async (event: React.ChangeEvent<{}>, value: string) => {
-        setSearchValue(value);
+
         if (value.length > 2) {
             try {
                 const response = await axios.get('https://api.skypicker.com/locations', {
